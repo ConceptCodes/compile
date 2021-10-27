@@ -1,24 +1,56 @@
-# v2
+<p align="center"><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img width="100" src="./public/img/icons/mstile-150x150.png" alt="Vue logo"></a></p>
 
-## Project setup
+# Compile - ML Text Summarizer & Paraphraser
+
+## What is Compile?
+This was built for a good friend who needed to write a paper from numerous sources. I thought a summarizer would be helpful to speed up his workflow. The paraphaser is a just cherry on top, tho its still buggy :)
+
+![Summarize](./demo.png)
+
+## Requirement
+- Vue 3
+- Node.js
+
+## Usage
+
+Clone it!
+
 ```
-yarn install
+$ git clone git@github.com:conceptcodes/compile.git
 ```
 
-### Compiles and hot-reloads for development
+Go into the project directory and run the command:
+
 ```
-yarn serve
+$ yarn install
 ```
 
-### Compiles and minifies for production
+Compiles and minifies for production
 ```
 yarn build
 ```
 
-### Lints and fixes files
+Live development server
+```
+yarn serve
+```
+Open `http://localhost:8080` and enjoy!
+
+
+Run your unit tests
+```
+yarn test:unit
+```
+
+Run your end-to-end tests
+```
+yarn test:e2e
+```
+
+Lints and fixes files
 ```
 yarn lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
