@@ -3,13 +3,12 @@
     <v-toolbar color="transparent" flat>
       <v-toolbar-title class="font-weight-bold" >Compile;</v-toolbar-title>
       <v-spacer></v-spacer>
-
-      <v-btn text href="/paraphase">
+      <!-- <v-btn text href="/paraphase">
         Paraphrase
       </v-btn>
       <v-btn text href="/qa">
         Question & Answering
-      </v-btn>
+      </v-btn> -->
     </v-toolbar>
     <v-main>
       <router-view />
@@ -22,3 +21,7 @@ export default {
   name: "App",
 };
 </script>
+
+<style lang="scss">
+
+</style>
