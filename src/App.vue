@@ -1,20 +1,24 @@
 <template>
   <v-app>
-    <v-app-bar absolute color="transparent" flat>
-      <v-toolbar-title>Compile</v-toolbar-title>
+    <v-toolbar color="transparent" flat>
+      <v-toolbar-title class="font-weight-bold" >Compile;</v-toolbar-title>
       <v-spacer></v-spacer>
-      <a href="/paraphrase">Paraphrase</a>
-      <a href="/qa">Question & Answering</a>
-    </v-app-bar>
+
+      <v-btn text href="/paraphase">
+        Paraphrase
+      </v-btn>
+      <v-btn text href="/qa">
+        Question & Answering
+      </v-btn>
+    </v-toolbar>
     <v-main>
-      <router-view/>
+      <router-view />
     </v-main>
   </v-app>
 </template>
 
 <script>
-
 export default {
-  name: 'App',
+  name: "App",
 };
 </script>
