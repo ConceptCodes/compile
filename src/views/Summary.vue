@@ -67,7 +67,6 @@
                   :width="15"
                   :value="value"
                   color="purple darken-3">
-
                     <div class="display-1">
                       {{ value }}%
                     </div>
@@ -120,9 +119,5 @@ export default {
 </script>
 
 <style lang="scss">
-$progress-circular-underlay-stroke: rgba(0, 0, 0, 0.25);
 
-#summary {
-  height: 100%;
-}
 </style>
