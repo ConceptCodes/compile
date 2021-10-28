@@ -5,7 +5,7 @@
         title="Text Summarization"
         :img="require('@/assets/img/summary.jpg')"
       />
-      <v-row class="py-2">
+      <v-row justify="between" class="py-2">
         <v-col>
           <v-label># of Sentences</v-label>
           <v-slider color="deep-purple lighten-4" v-model="num_of_sentences" step="2" thumb-label ticks></v-slider>
@@ -13,21 +13,22 @@
             label="Paste Article Here"
             v-model="article"
             counter
+            clearable
             solo
             full-width
             @input="getSummary"
-            single-line
           ></v-textarea>
         </v-col>
-        <v-col fill-height>
+        <v-col>
           <v-textarea
             v-model="summary"
-            label="Summary"
+            label="Auto-Generated Summary"
+            id="summary"
             counter
+            class="text--purple font-weight-medium"
             solo
-            full-width
             readonly
-            single-line
+            shaped
             background-color="deep-purple lighten-3"
           ></v-textarea>
         </v-col>
@@ -38,6 +39,7 @@
             :size="200"
             :width="15"
             :value="value"
+            class="text--white"
             color="deep-purple lighten-3"
           >
             {{ value }}
@@ -71,3 +73,11 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+$progress-circular-underlay-stroke: rgba(0,0,0,.25);
+
+  #summary {
+    height: 100%;
+  }
+</style>
