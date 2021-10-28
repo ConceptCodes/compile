@@ -1,5 +1,5 @@
 <template>
-  <v-card flat>
+  <v-card flat color="transparent">
     <v-row class="py-3">
       <v-col class="content mt-5">
         <v-card-title
@@ -13,6 +13,8 @@
         <v-img
           class="d-none d-lg-block"
           :src="img"
+          width="500"
+          height="500"
           lazy-src="https://via.placeholder.com/500"
         ></v-img>
       </v-col>
