@@ -5,15 +5,17 @@
         title="Text Summarization"
         :img="require('@/assets/img/summary.jpg')"
       />
-      <v-row>
+      <v-row class="py-2">
         <v-col>
-          <v-text-field v-model="title" label="Article Title" single-line solo></v-text-field>
+          <v-label># of Sentences</v-label>
+          <v-slider color="deep-purple lighten-4" v-model="num_of_sentences" step="2" thumb-label ticks></v-slider>
           <v-textarea
             label="Paste Article Here"
             v-model="article"
             counter
             solo
             full-width
+            @input="getSummary"
             single-line
           ></v-textarea>
         </v-col>
@@ -31,6 +33,7 @@
         </v-col>
         <v-col>
           <v-progress-circular
+            v-if="value != 0"
             :rotate="-90"
             :size="200"
             :width="15"
@@ -46,15 +49,23 @@
 </template>
 
 <script>
+import SummaryBot from "summary-bot";
 import Banner from "@/components/Banner.vue";
 export default {
   name: "Home",
-  data: ()=> ({
-    value: 50,
-    title: null,
+  data: () => ({
+    value: 0,
     article: null,
-    summary: null
+    num_of_sentences: 4,
+    summary: null,
   }),
+  methods: {
+    getSummary() {
+      let _summary = SummaryBot(this.article, this.num_of_sentences)
+      this.value = _summary.percentReduction
+      this.summary = _summary.text
+    },
+  },
   components: {
     Banner,
   },
