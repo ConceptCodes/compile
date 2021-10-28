@@ -3,7 +3,7 @@
     <v-row class="py-3">
       <v-col class="content mt-5">
         <v-card-title
-          class="display-3 font-weight-bold mb-3 text-capitalize"
+          class="display-2 font-weight-bold mb-3 text-capitalize"
           v-text="title"
         ></v-card-title>
         <v-card-subtitle class="mb-4" v-text="body"></v-card-subtitle>
