@@ -2,8 +2,11 @@
   <div id="summary" class="purple darken-3">
     <v-container>
       <banner
-        title="Text Summarization"
+        title="Text Summarization."
         :img="require('@/assets/img/summary.jpg')"
+        :body="desc"
+        btn="Article Further explaing Algorithm"
+        link="https://towardsdatascience.com/a-quick-introduction-to-text-summarization-in-machine-learning-3d27ccf18a9f#:~:text=Text%20summarization%20refers%20to%20the,natural%20language%20processing%20(NLP)."
         class="pb-4"
       />
 
@@ -97,6 +100,7 @@ export default {
     max_sentences: 0,
     num_of_sentences: 0,
     summary: '',
+    desc: 'This is a very basic algorithm. First, we split the article into paragraphs and then into sentences. Afterwards we compare the frequency of each word with every other sentence. Finally we attach a weight to each sentence and return every sentence, in sequential order, above a threshold. Just a proof of concept atm, v2 will introduce more advanced NLP techniques to acheive better results. Please enjoy :)'
   }),
   methods: {
     getSummary() {
