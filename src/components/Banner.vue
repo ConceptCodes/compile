@@ -1,5 +1,5 @@
 <template>
-  <v-card flat color="transparent">
+  <v-card flat>
     <v-row class="py-3">
       <v-col class="content mt-5">
         <v-card-title
@@ -7,7 +7,7 @@
           v-text="title"
         ></v-card-title>
         <v-card-subtitle class="mb-4" v-text="body"></v-card-subtitle>
-        <v-btn block elevation="2" large outlined rounded>Begin</v-btn>
+        <v-btn class="btn" block elevation="2" large outlined rounded>Begin</v-btn>
       </v-col>
       <v-col>
         <v-img
@@ -42,6 +42,12 @@ export default {
 
 <style lang="scss" scoped>
 .content {
-  z-index: 2;
+  z-index: 1;
+  position: relative;
+  top: 50%;
+}
+.btn {
+  background-color: white;
+  border: 3px solid black;
 }
 </style>
