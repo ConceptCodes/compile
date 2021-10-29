@@ -92,7 +92,7 @@
                   <v-col cols="6" lg="12">
                     <div class="pa-4">
                       <v-chip-group column>
-                        <v-chip class="purple purple--text lighten-5" v-for="(tag, index) in tags" :key="index">
+                        <v-chip class="purple purple--text text-capitalize lighten-5" v-for="(tag, index) in tags" :key="index">
                           {{ tag.title }}
                           <span class="ml-3 purple--text darken-3 font-weight-bold">{{
                             tag.value

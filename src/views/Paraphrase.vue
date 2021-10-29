@@ -22,7 +22,7 @@
 
         <v-stepper-content step="1">
           <v-card flat class="my-3 mx-2" color="transparent">
-            <v-label># of Sentences</v-label>
+            <v-label>Strength</v-label>
             <v-slider
               color="red accent-3"
               v-model="strength"
@@ -124,31 +124,14 @@ export default {
     paraphrase() {
       // split paragraph into sentences
       let _sentences = this.article.match(/\(?[^\.\?\!]+[\.!\?]\)?/g);
-      // convert sentences
-      _sentences.map(x => {
-        axios.post("https://rewriter-paraphraser-text-changer-multi-language.p.rapidapi.com/rewrite",{ language: "en", strength: this.strength, text: x }, {headers: {
-            "content-type": "application/json",
-            "x-rapidapi-host":
-              "rewriter-paraphraser-text-changer-multi-language.p.rapidapi.com",
-            "x-rapidapi-key":
-              "04aae48a77msh382646537c084cdp150285jsn75d959ee5ba3",
-          }})
-          .then((response) => {
-            this.translations.push(response.data)
+        axios.post("/api/paraphrase",{ strength: this.strength, text: this.article })
+          .then((res) => {
+            this.content = res.data.content
+            this.value = res.data.similarity
+            this.$nextTick(() => this.step = 2)
+          }).catch((err) => {
+            console.error(err)
           })
-          .catch(function (error) {
-            console.error(error);
-          });
-      });
-      // this.value = parseFloat(
-      //   this.translations
-      //     .map((li) => li.similarity)
-      //     .reduce((sum, val) => sum + val, 0) / this.translations.length
-      // ).toFixed(2);
-      
-      // this.content = this.translations.map(x => x.rewrite).join(" ")
-      console.log(this.translations)
-      this.step = 2;
     },
   },
   components: {
