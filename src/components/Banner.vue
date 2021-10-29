@@ -7,7 +7,7 @@
           v-text="title"
         ></v-card-title>
         <v-card-subtitle class="mb-4" v-text="body"></v-card-subtitle>
-        <v-btn class="btn" :href="link" elevation="2" large outlined rounded>{{ btn }}</v-btn>
+        <v-btn v-if="btn" class="btn" :href="link" elevation="2" large outlined rounded>{{ btn }}</v-btn>
       </v-col>
       <v-col class="d-none d-lg-block">
         <v-img
