@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <v-toolbar id="navbar" dark flat>
+    <v-toolbar id="navbar" flat>
       <v-toolbar-title  class="font-weight-bold">
-        <a class="white--text" href="/">Compile;</a>
+        <a class="black--text" href="/">Compile;</a>
         <span>
           <v-chip class="ma-2 text-capitalize" x-small>beta</v-chip>
         </span>

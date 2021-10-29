@@ -9,9 +9,8 @@
         <v-card-subtitle class="mb-4" v-text="body"></v-card-subtitle>
         <v-btn class="btn" :href="link" elevation="2" large outlined rounded>{{ btn }}</v-btn>
       </v-col>
-      <v-col>
+      <v-col class="d-none d-lg-block">
         <v-img
-          class="d-none d-lg-block"
           :src="img"
           width="500"
           height="500"
