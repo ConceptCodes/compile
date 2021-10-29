@@ -4,6 +4,7 @@
       <banner
         title="Article Paraphrasing."
         :img="require('@/assets/img/paraphrase.jpg')"
+        :body="desc"
         btn="click me"
         link="google.com"
         class="pb-4"
@@ -37,7 +38,7 @@
         <v-stepper-content step="2">
           <v-card flat>
             <v-row align="center" justify="space-between">
-              <v-col cols="12" lg="8">
+              <v-col cols="12" md="8">
                 <v-textarea
                   v-model="content"
                   label="Content"
@@ -49,7 +50,7 @@
                   background-color="red lighten-4"
                 ></v-textarea>
               </v-col>
-              <v-col class="text-center" cols="12" lg="4">
+              <v-col class="text-center" cols="12" md="4">
                 <v-progress-circular
                   :rotate="-90"
                   :size="200"
@@ -73,17 +74,23 @@
 </template>
 
 <script>
+/* eslint-disable */
 import Banner from "@/components/Banner.vue";
+
 export default {
   name: "Paraphrase",
   data: () => ({
     article: '',
     content: '',
+    desc: 'In need of a basic algorithm to help you paraphrase content? Your in luck. First, we split the text into sentences. Aftewards, we translate each sentence between multiple different languages before being translated back to english. Lastly, we join all the sentences back together and evaluate how close it is to the original content.',
     step: 1,
     value: 0
   }),
   methods: {
     paraphrase() {
+      // split paragraph into sentences
+      let sentences = this.article.match(/\(?[^\.\?\!]+[\.!\?]\)?/g)
+      // translate content to chinese
 
       this.step = 2
     }
