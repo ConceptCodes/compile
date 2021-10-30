@@ -2,13 +2,13 @@
   <v-app>
     <v-toolbar id="navbar" flat>
       <v-toolbar-title  class="font-weight-bold">
-        <a class="black--text" href="/">Compile;</a>
+        <a class="text-decoration-none black--text" href="/">Compile;</a>
         <span>
           <v-chip class="ma-2 text-capitalize" x-small>beta</v-chip>
         </span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn text href="/paraphrase"> Paraphrase </v-btn>
+      <!-- <v-btn text href="/paraphrase"> Paraphrase </v-btn> -->
       <!--  <v-btn text href="/qa">
         Question & Answering
       </v-btn> -->
@@ -37,10 +37,7 @@ export default {
 </script>
 
 <style lang="scss">
-a {
-  text-decoration: none;
-}
-#navbar {
-  z-index: 2;
-}
+// a {
+//   text-decoration: none;
+// }
 </style>
