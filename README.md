@@ -3,7 +3,7 @@
 # Compile - ML Homework Assistant
 
 Live Demo:
-> [Portal](http://portaldemo-env.eba-i9jncaxv.us-east-2.elasticbeanstalk.com/#/)
+> [Compile](https://compile.conceptcodes.dev)
 
 ## What is Compile?
 This was built for a good friend who needed to write a paper from numerous sources. I thought a summarizer would be helpful to speed up his workflow. The paraphaser is a just cherry on top, tho its still buggy :)
