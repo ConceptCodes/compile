@@ -1,6 +1,6 @@
 <p align="center"><a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img width="100" src="./public/img/icons/mstile-150x150.png" alt="Vue logo"></a></p>
 
-# Compile - ML Text Summarizer & Paraphraser
+# Compile - ML Homework Assistant
 
 ## What is Compile?
 This was built for a good friend who needed to write a paper from numerous sources. I thought a summarizer would be helpful to speed up his workflow. The paraphaser is a just cherry on top, tho its still buggy :)
